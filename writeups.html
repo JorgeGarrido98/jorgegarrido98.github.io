@@ -28,33 +28,35 @@
       bottom: 0;
       z-index: 0;
     }
-    .nav-custom {
+    .navbar {
       position: fixed;
       top: 0;
-      left: 0;
-      right: 0;
+      width: 100%;
       backdrop-filter: blur(8px);
       background: rgba(0,0,0,0.6);
-      padding: 0.5rem 1rem;
       z-index: 999;
     }
-    .nav-custom a:hover {
-      color: #ffc107;
+    .navbar-nav .nav-link {
+      color: white !important;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffc107 !important;
+    }
+    .navbar-collapse {
+      background: rgba(0,0,0,0.95);
+      border-radius: 0.5rem;
+      padding: 1rem;
     }
     .content {
       position: relative;
       z-index: 1;
       color: white;
       text-align: left;
-      top: 55%;
-      transform: translateY(-50%);
-      /*background-color: rgba(0,0,0,0.5);*/
       padding: 2rem;
-      padding-top: 5rem; /* deja espacio para el nav fijo */
+      padding-top: 7rem; /* espacio suficiente bajo el navbar fijo */
       border-radius: 8px;
       max-width: 800px;
       margin: auto;
-      margin-top: 3rem; /* para dejar espacio con el nav fijo */
     }
     .content h1, .content h2 {
       text-align: center;
@@ -77,25 +79,30 @@
     
     <div class="overlay"></div>
 
-    <!-- nav -->
-    <nav class="nav-custom d-flex align-items-center">
-      <div class="container d-flex align-items-center gap-3">
-        <ul class="list-unstyled d-flex mb-0 align-items-center gap-3">
-          <li>
-            <a class="fw-bold text-white text-decoration-none d-flex align-items-center" href="index.html">
-              <img src="images/hacker.png" alt="Logo hacker" width="24" height="24" class="me-2">
-              Inicio
-            </a>
-          </li>
-          <li class="text-white">|</li>
-          <li><a class="fw-bold text-white text-decoration-none" href="about.html">Sobre mí</a></li>
-          <li class="text-white">|</li>
-          <li><a class="fw-bold text-white text-decoration-none" href="projects.html">Proyectos</a></li>
-          <li class="text-white">|</li>
-          <li><a class="fw-bold text-white text-decoration-none" href="writeups.html">Write-ups</a></li>
-          <li class="text-white">|</li>
-          <li><a class="fw-bold text-white text-decoration-none" href="contact.html">Contacto</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav gap-3 align-items-center"> 
+            <li class="nav-item d-flex align-items-center">
+              <a class="nav-link fw-bold d-flex align-items-center" href="index.html">
+                <img src="images/hacker.png" alt="Logo hacker" width="24" height="24" class="me-2">
+                Inicio
+              </a>
+            </li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="about.html">Sobre mí</a></li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="projects.html">Proyectos</a></li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="writeups.html">Write-ups</a></li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -144,5 +151,8 @@
       <!-- Puedes duplicar bloques .writeup para más entradas -->
     </div>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
   </body>
 </html>
