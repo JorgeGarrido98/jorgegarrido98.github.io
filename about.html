@@ -4,83 +4,161 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sobre mí | Jorge Garrido</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    html, body {
       margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
+      height: 100%;
+      /*overflow: hidden;*/
     }
-    header {
-      background: #222;
-      color: #fff;
+    .video-bg {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .overlay {
+      background: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+    }
+    .nav-custom {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem 1rem;
+      z-index: 999;
+    }
+    .nav-custom a:hover {
+      color: #ffc107;
+    }
+    .content {
+      position: relative;
+      z-index: 1;
+      color: white;
       text-align: center;
-      padding: 2rem 1rem;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    nav {
-      background: #333;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      padding: 1rem;
-      display: inline-block;
-    }
-    nav a:hover {
-      background: #555;
-    }
-    main {
+      top: 55%;
+      transform: translateY(-50%);
+      padding: 2rem;
+      padding-top: 5rem; /* deja espacio para el nav fijo */
+      border-radius: 8px;
       max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: auto;
+      margin-top: 6rem;  /* espacio para el menú fijo */
+      background: none;
     }
-    footer {
-      background: #222;
-      color: #fff;
+    .content ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 2rem;
+    }
+    .content h1, .content h3 {
       text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .content p {
+      margin-bottom: 1rem;
+    }
+    ul {
+      margin-left: 1.5rem;
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>Sobre mí</h1>
-  </header>
-  <nav>
-    <a href="index.html">Inicio</a>
-    <a href="about.html">Sobre mí</a>
-    <a href="projects.html">Proyectos</a>
-    <a href="writeups.html">Write-ups</a>
-    <a href="contact.html">Contacto</a>
-  </nav>
-  <main>
-    <h2>Jorge Garrido</h2>
-    <p>Soy Pentester Junior apasionado de los CTFs y la ciberseguridad ofensiva. Me interesa profundizar en técnicas de hacking ético, vulnerabilidades web y análisis forense.</p>
-    <h3>Formación</h3>
-    <ul>
-      <li>Grado en Ingeniería Informática (o tu carrera, puedes editarlo)</li>
-      <li>Certificaciones: (aquí puedes añadirlas en el futuro)</li>
-    </ul>
-    <h3>Habilidades técnicas</h3>
-    <ul>
-      <li>Linux</li>
-      <li>Python, Bash</li>
-      <li>Red Team / Pentesting básico</li>
-      <li>Metasploit, Burp Suite</li>
-    </ul>
-    <h3>Mi filosofía</h3>
-    <p>Creo en compartir conocimiento y seguir aprendiendo cada día, por eso publico write-ups y proyectos abiertos en esta web.</p>
-  </main>
-  <footer>
-    © 2025 Jorge Garrido
-  </footer>
-</body>
+  <body>
+
+    <!-- video de fondo -->
+    <video autoplay muted loop class="video-bg">
+      <source src="../images/presentacion.mp4" type="video/mp4">
+      Tu navegador no soporta vídeo en HTML5.
+    </video>
+    
+    <div class="overlay"></div>
+
+    <!-- nav nuevo -->
+    <nav class="nav-custom d-flex align-items-center">
+      <div class="container d-flex align-items-center gap-3">
+        <ul class="list-unstyled d-flex mb-0 align-items-center gap-3">
+          <li>
+            <a class="fw-bold text-white text-decoration-none d-flex align-items-center" href="index.html">
+              <img src="images/hacker.png" alt="Logo hacker" width="24" height="24" class="me-2">
+              Inicio
+            </a>
+          </li>
+          <li class="text-white">|</li>
+          <li><a class="fw-bold text-white text-decoration-none" href="about.html">Sobre mí</a></li>
+          <li class="text-white">|</li>
+          <li><a class="fw-bold text-white text-decoration-none" href="projects.html">Proyectos</a></li>
+          <li class="text-white">|</li>
+          <li><a class="fw-bold text-white text-decoration-none" href="writeups.html">Write-ups</a></li>
+          <li class="text-white">|</li>
+          <li><a class="fw-bold text-white text-decoration-none" href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="content container">
+
+      <h1>Sobre mí</h1>
+      <p>Soy Pentester Junior apasionado de los CTFs y la ciberseguridad ofensiva. Me interesa profundizar en técnicas de <span class="text-warning fw-bold">hacking ético</span>, vulnerabilidades web y análisis forense.</p>
+
+      <hr class="border border-warning border-2 opacity-50 my-4">
+
+      <h3 class="text-warning">🎓 Formación</h3>
+      <ul>
+        <li>Grado Superior en Desarrollo de Aplicaciones Web (DAW)</li>
+        <li>Máster en Ciberseguridad</li>
+        <li>Certificaciones: <span class="text-warning">en progreso</span></li>
+      </ul>
+
+      <hr class="border border-warning border-2 opacity-50 my-4">
+
+      <h3 class="text-warning">🛠️ Habilidades técnicas</h3>
+      <ul>
+        <li>Linux</li>
+        <li>Python, Bash</li>
+        <li>Red Team / Pentesting básico</li>
+      </ul>
+
+      <h4 class="text-warning">🔎 Herramientas de escaneo</h4>
+      <ul>
+        <li>Nmap</li>
+        <li>Arp-scan</li>
+        <li>Gobuster</li>
+      </ul>
+
+      <h4 class="text-warning">💥 Herramientas de explotación</h4>
+      <ul>
+        <li>Metasploit</li>
+        <li>Msfvenom</li>
+        <li>SQLMap</li>
+        <li>Hydra</li>
+        <li>JohnTheRipper</li>
+      </ul>
+
+      <h4 class="text-warning">🔧 Herramientas de análisis y post-explotación</h4>
+      <ul>
+        <li>Wireshark</li>
+        <li>Netcat</li>
+        <li>Burp Suite</li>
+      </ul>
+
+      <hr class="border border-warning border-2 opacity-50 my-4">
+
+      <h3 class="text-warning">💡 Mi filosofía</h3>
+      <p>Creo en compartir conocimiento y seguir aprendiendo cada día, por eso publico write-ups y proyectos abiertos en esta web.</p>
+
+    </div>
+
+  </body>
 </html>
