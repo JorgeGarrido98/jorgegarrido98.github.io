@@ -111,6 +111,19 @@
       <p>En esta sección comparto write-ups de CTFs, análisis de vulnerabilidades y técnicas de explotación que he resuelto o estudiado.</p>
 
       <div class="writeup">
+        <h4 class="text-warning">🦑 Bocata de Calamares | TheHackerLabs</h4>
+        <p>Write-up de la máquina Bocata de Calamares, donde se realiza una explotación completa comenzando con una SQLi para acceder como administrador, descubriendo páginas ocultas con LFI, y terminando con una escalada de privilegios mediante <code>find</code> desde GTFOBins.</p>
+        <ul class="list-unstyled">
+          <li><strong>Plataforma:</strong> TheHackerLabs</li>
+          <li><strong>Técnicas:</strong> Enumeración web, inyección SQL, local file inclusion (LFI), decodificación Base64, lectura de <code>/etc/passwd</code>, fuerza bruta SSH, escalada de privilegios con <code>find</code> (GTFOBins)</li>
+        </ul>
+        <a href="https://github.com/JorgeGarrido98/TheHackerLabs/blob/main/BocataDeCalamares.md" target="_blank" 
+          class="btn btn-warning mt-2 fw-bold d-block mx-auto" style="max-width: 200px;">
+          Leer write-up
+        </a>
+      </div>
+      
+      <div class="writeup">
         <h4 class="text-warning">🏠 Casa Paco | TheHackerLabs</h4>
         <p>Write-up de la máquina Casa Paco, donde se explota una vulnerabilidad de inyección de comandos para obtener acceso a sistema, se analiza una tarea cron para escalar privilegios, y se obtiene una shell con permisos de root.</p>
         <ul class="list-unstyled">
