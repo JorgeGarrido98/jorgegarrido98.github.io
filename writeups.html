@@ -111,6 +111,19 @@
       <p>En esta sección comparto write-ups de CTFs, análisis de vulnerabilidades y técnicas de explotación que he resuelto o estudiado.</p>
 
       <div class="writeup">
+        <h4 class="text-warning">🔔 Campana Feliz | TheHackerLabs</h4>
+        <p>Write-up de la máquina Campana Feliz, donde se parte de una pista codificada en Base64, se enumeran rutas con Gobuster para explotar una webshell, y se realiza una fuerza bruta con hydra sobre un panel de login web. Finalmente, se accede a Webmin y se escala privilegios mediante una reverse shell.</p>
+        <ul class="list-unstyled">
+          <li><strong>Plataforma:</strong> TheHackerLabs</li>
+          <li><strong>Técnicas:</strong> Decodificación Base64, enumeración con Gobuster, explotación de <code>/shell.php</code> mediante hydra, acceso a Webmin (puerto 10000) y obtención de acceso SSH y escalada de privilegios con reverse shell.</li>
+        </ul>
+        <a href="https://github.com/JorgeGarrido98/TheHackerLabs/blob/main/CampanaFeliz.md" target="_blank" 
+          class="btn btn-warning mt-2 fw-bold d-block mx-auto" style="max-width: 200px;">
+          Leer write-up
+        </a>
+      </div>
+      
+      <div class="writeup">
         <h4 class="text-warning">🏃 Runners | TheHackerLabs</h4>
         <p>Write-up de la máquina Runners, donde se explota una inyección SQL para enumerar bases de datos, se crackean hashes para acceder por SSH y se utiliza pspy para identificar un script vulnerable que permite escalar privilegios hasta root.</p>
         <ul class="list-unstyled">
