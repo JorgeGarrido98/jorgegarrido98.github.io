@@ -115,6 +115,26 @@
 
     <div id="writeupsContainer" class="mt-4">
         <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
+        <div class="writeup" data-tags="código fuente,fuerza bruta SSH,Hydra,.bash_history,Docker,escape de contenedor,chroot,escalada de privilegios">
+            <h4 class="text-warning">🧩 CanYouHackMe | TheHackerLabs</h4>
+            <p>Write-up de la máquina CanYouHackMe, donde se analiza el código fuente de una web para obtener credenciales, se realiza fuerza bruta SSH con Hydra y se escapa de un contenedor Docker a través de un volumen montado. Finalmente, se usa <code>chroot</code> para escalar privilegios y obtener acceso root.</p>
+            <ul class="list-unstyled">
+                <li><strong>Plataforma:</strong> TheHackerLabs</li>
+                <li><strong>Técnicas:</strong> Enumeración de código fuente, fuerza bruta SSH con Hydra, análisis de <code>.bash_history</code>, escape de Docker vía volumen montado, escalada de privilegios con <code>chroot</code></li>
+            </ul>
+            <div class="tags mb-2">
+                <span class="badge bg-secondary">Análisis de código fuente</span>
+                <span class="badge bg-secondary">Hydra - Fuerza bruta SSH</span>
+                <span class="badge bg-secondary">Análisis de .bash_history</span>
+                <span class="badge bg-secondary">Docker Host Breakout via Volume Mount</span>
+                <span class="badge bg-secondary">Escalada de privilegios con chroot</span>
+            </div>
+            <a href="writeups/canyouhackme.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+                Leer write-up
+            </a>
+        </div>
+
+
         <div class="writeup" data-tags="FTP anónimo,login.txt,fuerza bruta SSH,timeout_suid,escalada de privilegios">
                 <h4 class="text-warning">⏱️ TickTackRoot | TheHackerLabs</h4>
                 <p>Write-up de la máquina TickTackRoot, donde se accede inicialmente mediante FTP anónimo. A través de ficheros reveladores y banners, se identifican usuarios y se realiza una fuerza bruta con credenciales válidas. La escalada final se consigue explotando un binario SUID llamado <code>timeout_suid</code>.</p>

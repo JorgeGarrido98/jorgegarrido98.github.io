@@ -112,6 +112,19 @@
       <p>En esta sección comparto write-ups de CTFs, análisis de vulnerabilidades y técnicas de explotación que he resuelto o estudiado.</p>
 
       <div class="writeup">
+        <h4 class="text-warning">🧠 CanYouHackMe | TheHackerLabs</h4>
+        <p>Write-up de la máquina CanYouHackMe, que incluye técnicas de enumeración web, fuerza bruta de credenciales SSH y análisis del historial de comandos del usuario para obtener información sensible. La escalada final a root se logra mediante el escape de un contenedor Docker gracias a un volumen montado y utilizando <code>chroot</code>.</p>
+        <ul class="list-unstyled">
+          <li><strong>Plataforma:</strong> TheHackerLabs</li>
+          <li><strong>Técnicas:</strong> Enumeración de código fuente web, fuerza bruta de SSH con Hydra, análisis de <code>.bash_history</code>, escape de Docker vía volumen montado, uso de <code>chroot</code> para escalada de privilegios</li>
+        </ul>
+        <a href="https://github.com/JorgeGarrido98/TheHackerLabs/blob/main/CanYouHackMe.md" target="_blank" 
+          class="btn btn-warning mt-2 fw-bold d-block mx-auto" style="max-width: 200px;">
+          Leer write-up
+        </a>
+      </div>
+
+      <div class="writeup">
         <h4 class="text-warning">⏱️ TickTackRoot | TheHackerLabs</h4>
         <p>Write-up de la máquina TickTackRoot, donde se accede inicialmente mediante FTP anónimo. A través de ficheros reveladores y banners, se identifican usuarios y se realiza una fuerza bruta con credenciales válidas. La escalada final se consigue explotando un binario SUID llamado <code>timeout_suid</code>.</p>
         <ul class="list-unstyled">
