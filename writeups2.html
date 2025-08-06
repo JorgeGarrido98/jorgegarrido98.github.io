@@ -115,6 +115,27 @@
 
     <div id="writeupsContainer" class="mt-4">
       <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
+       <div class="writeup" data-tags="FTP anónimo,login.txt,fuerza bruta SSH,timeout_suid,escalada de privilegios">
+            <h4 class="text-warning">⏱️ TickTackRoot | TheHackerLabs</h4>
+            <p>Write-up de la máquina TickTackRoot, donde se accede inicialmente mediante FTP anónimo. A través de ficheros reveladores y banners, se identifican usuarios y se realiza una fuerza bruta con credenciales válidas. La escalada final se consigue explotando un binario SUID llamado <code>timeout_suid</code>.</p>
+            
+            <ul class="list-unstyled">
+                <li><strong>Plataforma:</strong> TheHackerLabs</li>
+                <li><strong>Técnicas:</strong> Acceso por FTP anónimo, reconocimiento de usuarios en <code>login.txt</code>, identificación de usuario por banner, fuerza bruta SSH, escalada de privilegios con <code>timeout_suid</code></li>
+            </ul>
+
+            <div class="tags mb-2">
+                <span class="badge bg-secondary">FTP anónimo</span>
+                <span class="badge bg-secondary">login.txt</span>
+                <span class="badge bg-secondary">fuerza bruta SSH</span>
+                <span class="badge bg-secondary">timeout_suid</span>
+                <span class="badge bg-secondary">escalada de privilegios</span>
+            </div>
+
+            <a href="writeups/ticktackroot.html" class="btn btn-warning mt-2 fw-bold d-block mx-auto" style="max-width: 200px;">
+                Leer write-up
+            </a>
+        </div>
     </div>
   </div>
 
