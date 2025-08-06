@@ -1,249 +1,248 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Write-ups | Jorge Garrido</title>
-  <link rel="icon" href="../images/hacker.png" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-    }
-    .video-bg {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%;
-      min-height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 0;
-    }
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      backdrop-filter: blur(8px);
-      background: rgba(0,0,0,0.6);
-      z-index: 999;
-    }
-    .navbar-nav .nav-link {
-      color: white !important;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #ffc107 !important;
-    }
-    .navbar-collapse {
-      background: rgba(0,0,0,0.95);
-      border-radius: 0.5rem;
-      padding: 1rem;
-    }
-    .content {
-      position: relative;
-      z-index: 1;
-      color: white;
-      padding: 2rem;
-      padding-top: 7rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .writeup {
-      background-color: rgba(0,0,0,0.5);
-      padding: 1.5rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-    }
-    .tags span {
-      margin-right: 0.5rem;
-    }
-    #searchInput {
-      max-width: 500px;
-      margin-bottom: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Write-ups | Jorge Garrido</title>
+    <link rel="icon" href="../images/hacker.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+        margin: 0;
+        height: 100%;
+        }
+        .video-bg {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        }
+        .overlay {
+        background: rgba(0, 0, 0, 0.7);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        }
+        .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        backdrop-filter: blur(8px);
+        background: rgba(0,0,0,0.6);
+        z-index: 999;
+        }
+        .navbar-nav .nav-link {
+        color: white !important;
+        }
+        .navbar-nav .nav-link:hover {
+        color: #ffc107 !important;
+        }
+        .navbar-collapse {
+        background: rgba(0,0,0,0.95);
+        border-radius: 0.5rem;
+        padding: 1rem;
+        }
+        .content {
+        position: relative;
+        z-index: 1;
+        color: white;
+        padding: 2rem;
+        padding-top: 7rem;
+        max-width: 1200px;
+        margin: auto;
+        }
+        .writeup {
+        background-color: rgba(0,0,0,0.5);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        }
+        .tags span {
+        margin-right: 0.5rem;
+        }
+        #searchInput {
+        max-width: 500px;
+        margin-bottom: 1rem;
+        }
+    </style>
 </head>
 <body>
-  <video autoplay muted loop class="video-bg">
-    <source src="../images/presentacion.mp4" type="video/mp4">
-    Tu navegador no soporta vídeo en HTML5.
-  </video>
-  <div class="overlay"></div>
+    <video autoplay muted loop class="video-bg">
+        <source src="../images/presentacion.mp4" type="video/mp4">
+        Tu navegador no soporta vídeo en HTML5.
+    </video>
+    <div class="overlay"></div>
 
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav gap-3 align-items-center">
-          <li class="nav-item d-flex align-items-center">
-            <a class="nav-link fw-bold d-flex align-items-center" href="index.html">
-              <img src="images/hacker.png" alt="Logo hacker" width="24" height="24" class="me-2">
-              Inicio
-            </a>
-          </li>
-          <li><span class="text-white d-none d-lg-inline">|</span></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="about.html">Sobre mí</a></li>
-          <li><span class="text-white d-none d-lg-inline">|</span></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="projects.html">Proyectos</a></li>
-          <li><span class="text-white d-none d-lg-inline">|</span></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="writeups.html">Write-ups</a></li>
-          <li><span class="text-white d-none d-lg-inline">|</span></li>
-          <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contacto</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav gap-3 align-items-center">
+            <li class="nav-item d-flex align-items-center">
+                <a class="nav-link fw-bold d-flex align-items-center" href="index.html">
+                <img src="images/hacker.png" alt="Logo hacker" width="24" height="24" class="me-2">
+                Inicio
+                </a>
+            </li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="about.html">Sobre mí</a></li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="projects.html">Proyectos</a></li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="writeups.html">Write-ups</a></li>
+            <li><span class="text-white d-none d-lg-inline">|</span></li>
+            <li class="nav-item"><a class="nav-link fw-bold" href="contact.html">Contacto</a></li>
+            </ul>
+        </div>
+        </div>
+    </nav>
 
-  <div class="content container">
-    <h1 class="text-center">Write-ups</h1>
-    <p class="text-center">Explora los write-ups de CTFs que he resuelto. Puedes buscar por nombre o filtrar por técnica.</p>
+    <div class="content container">
+        <h1 class="text-center">Write-ups</h1>
+        <p class="text-center">Explora los write-ups de CTFs que he resuelto. Puedes buscar por nombre o filtrar por técnica.</p>
 
     <div class="text-center">
-      <input type="text" id="searchInput" class="form-control mx-auto" placeholder="🔍 Buscar por nombre o técnica...">
+        <input type="text" id="searchInput" class="form-control mx-auto" placeholder="🔍 Buscar por nombre o técnica...">
     </div>
 
     <div id="writeupsContainer" class="mt-4">
-      <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
-       <div class="writeup" data-tags="FTP anónimo,login.txt,fuerza bruta SSH,timeout_suid,escalada de privilegios">
-            <h4 class="text-warning">⏱️ TickTackRoot | TheHackerLabs</h4>
-            <p>Write-up de la máquina TickTackRoot, donde se accede inicialmente mediante FTP anónimo. A través de ficheros reveladores y banners, se identifican usuarios y se realiza una fuerza bruta con credenciales válidas. La escalada final se consigue explotando un binario SUID llamado <code>timeout_suid</code>.</p>
+        <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
+        <div class="writeup" data-tags="FTP anónimo,login.txt,fuerza bruta SSH,timeout_suid,escalada de privilegios">
+                <h4 class="text-warning">⏱️ TickTackRoot | TheHackerLabs</h4>
+                <p>Write-up de la máquina TickTackRoot, donde se accede inicialmente mediante FTP anónimo. A través de ficheros reveladores y banners, se identifican usuarios y se realiza una fuerza bruta con credenciales válidas. La escalada final se consigue explotando un binario SUID llamado <code>timeout_suid</code>.</p>
+                
+                <ul class="list-unstyled">
+                    <li><strong>Plataforma:</strong> TheHackerLabs</li>
+                    <li><strong>Técnicas:</strong> Acceso por FTP anónimo, reconocimiento de usuarios en <code>login.txt</code>, identificación de usuario por banner, fuerza bruta SSH, escalada de privilegios con <code>timeout_suid</code></li>
+                </ul>
+
+                <div class="tags mb-2">
+                    <span class="badge bg-secondary">FTP Anónimo</span>
+                    <span class="badge bg-secondary">Hydra - Fuerza bruta SSH</span>
+                    <span class="badge bg-secondary">Escalada de privilegios - Binarios SUID</span>
+                </div>
+
+                <a href="writeups/ticktackroot.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+                    Leer write-up
+                </a>
+            </div>
+        </div>
+
+        <div class="writeup" data-tags="WordPress,reverse shell,hash cracking,SSH,port forwarding,SSTI,escalada de privilegios">
+            <h4 class="text-warning">🛡️ The First Avenger | TheHackerLabs</h4>
+            <p>Write-up de la máquina The First Avenger, donde se aprovecha una vulnerabilidad en un plugin de WordPress para obtener una reverse shell. A partir de ahí se analiza la configuración para acceder a la base de datos, se crackea un hash, se accede por SSH y se realiza port forwarding para explotar una SSTI que permite escalar a root.</p>
             
             <ul class="list-unstyled">
                 <li><strong>Plataforma:</strong> TheHackerLabs</li>
-                <li><strong>Técnicas:</strong> Acceso por FTP anónimo, reconocimiento de usuarios en <code>login.txt</code>, identificación de usuario por banner, fuerza bruta SSH, escalada de privilegios con <code>timeout_suid</code></li>
+                <li><strong>Técnicas:</strong> Enumeración y explotación de WordPress, reverse shell, análisis de configuración, crackeo de hashes, acceso SSH, port forwarding, explotación de SSTI, escalada a root</li>
             </ul>
 
             <div class="tags mb-2">
-                <span class="badge bg-secondary">FTP Anónimo</span>
-                <span class="badge bg-secondary">Hydra - Fuerza bruta SSH</span>
-                <span class="badge bg-secondary">Escalada de privilegios - Binarios SUID</span>
+                <span class="badge bg-secondary">WordPress</span>
+                <span class="badge bg-secondary">Reverse shell</span>
+                <span class="badge bg-secondary">JohnTheRipper - Hash cracking</span>
+                <span class="badge bg-secondary">Port Forwarding</span>
+                <span class="badge bg-secondary">SSTI</span>
             </div>
 
-            <a href="writeups/ticktackroot.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+            <a href="writeups/thefirstavenger.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+                Leer write-up
+            </a>
+        </div>
+
+        <div class="writeup" data-tags="enumeración web,ficheros cifrados,cracking de hashes,fuerza bruta SSH,sudo,escalada de privilegios">
+            <h4 class="text-warning">🧠 CryptoLabyrinth | TheHackerLabs</h4>
+            <p>Cracking de múltiples hashes y fuerza bruta SSH con wordlist personalizada. Escalada mediante contraseña crackeada.</p>
+            <ul class="list-unstyled">
+            <li><strong>Plataforma:</strong> TheHackerLabs</li>
+            <li><strong>Técnicas:</strong> fuzzing web, ficheros cifrados, cracking de hashes, fuerza bruta SSH, escalada de privilegios</li>
+            </ul>
+            <div class="tags mb-2">
+            <span class="badge bg-secondary">Gobuster - Fuzzing web</span>
+            <span class="badge bg-secondary">JohnTheRipper - Cracking de hashes</span>
+            <span class="badge bg-secondary">Hydra - Fuerza bruta SSH</span>
+            <span class="badge bg-secondary">Escalada de privilegios contraseña crackeada</span>
+            </div>
+            <a href="writeups/cryptolabyrinth.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+            Leer write-up
+            </a>
+        </div>
+
+        <div class="writeup" data-tags="SMB anónimo,compartidos,escalada SYSTEM,reverse shell,script SUID">
+            <h4 class="text-warning">🦘 Quokka | TheHackerLabs</h4>
+            <p>Enumeración SMB y escalada a SYSTEM mediante sustitución de script con reverse shell en PowerShell.</p>
+            <ul class="list-unstyled">
+                <li><strong>Plataforma:</strong> TheHackerLabs</li>
+                <li><strong>Técnicas:</strong> SMB anónimo, compartidos, escalada SYSTEM, reverse shell, Escalada de privilegios mediante Binarios SUID</li>
+            </ul>
+            <div class="tags mb-2">
+                <span class="badge bg-secondary">SMB anónimo</span>
+                <span class="badge bg-secondary">Escalada SYSTEM</span>
+                <span class="badge bg-secondary">Reverse shell</span>
+                <span class="badge bg-secondary">Escalada de privilegios - Binarios SUID</span>
+            </div>
+            <a href="writeups/quokka.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+                Leer write-up
+            </a>
+        </div>
+
+        <div class="writeup" data-tags="Base64,Gobuster,webshell,fuerza bruta SSH,Webmin,reverse shell,escalada de privilegios">
+            <h4 class="text-warning">🔔 Campana Feliz | TheHackerLabs</h4>
+            <p>Decodificación base64, enumeración con Gobuster y explotación de shell.php. Escalada mediante reverse shell y acceso a Webmin.</p>
+            <ul class="list-unstyled">
+                <li><strong>Plataforma:</strong> TheHackerLabs</li>
+                <li><strong>Técnicas:</strong> Gobuster - Fuzzing web, webshell, Hydra - Fuerza bruta SSH, Escalada de privilegios Reverse shell en Webmin</li>
+            </ul>
+            <div class="tags mb-2">
+                <span class="badge bg-secondary">Gobuster - Fuzzing web</span>
+                <span class="badge bg-secondary">Webshell</span>
+                <span class="badge bg-secondary">Hydra - Fuerza bruta SSH</span>
+                <span class="badge bg-secondary">Escalada de privilegios Reverse shell en Webmin</span>
+            </div>
+            <a href="writeups/campanafeliz.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+                Leer write-up
+            </a>
+        </div>
+
+        <div class="writeup" data-tags="SQLi,cracking de hashes,SSH,pspy,script vulnerable,Docker,escalada de privilegios">
+            <h4 class="text-warning">🏃 Runners | TheHackerLabs</h4>
+            <p>Inyección SQL, acceso SSH tras crackeo de hashes, y Script vulnerable y Docker.</p>
+            <ul class="list-unstyled">
+                <li><strong>Plataforma:</strong> TheHackerLabs</li>
+                <li><strong>Técnicas:</strong> SQLi, CrackStation - Cracking de hashes, Enumeración con pspy, script vulnerable, Escalada de privilegios vía Docker</li>
+            </ul>
+            <div class="tags mb-2">
+                <span class="badge bg-secondary">SQLi</span>
+                <span class="badge bg-secondary">CrackStation - Cracking de hashes</span>
+                <span class="badge bg-secondary">Enumeración con pspy</span>
+                <span class="badge bg-secondary">Script vulnerable</span>
+                <span class="badge bg-secondary">Escalada de privilegios vía Docker</span>
+            </div>
+            <a href="writeups/runners.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
                 Leer write-up
             </a>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const writeups = document.getElementsByClassName("writeup");
 
-    <div class="writeup" data-tags="WordPress,reverse shell,hash cracking,SSH,port forwarding,SSTI,escalada de privilegios">
-        <h4 class="text-warning">🛡️ The First Avenger | TheHackerLabs</h4>
-        <p>Write-up de la máquina The First Avenger, donde se aprovecha una vulnerabilidad en un plugin de WordPress para obtener una reverse shell. A partir de ahí se analiza la configuración para acceder a la base de datos, se crackea un hash, se accede por SSH y se realiza port forwarding para explotar una SSTI que permite escalar a root.</p>
-        
-        <ul class="list-unstyled">
-            <li><strong>Plataforma:</strong> TheHackerLabs</li>
-            <li><strong>Técnicas:</strong> Enumeración y explotación de WordPress, reverse shell, análisis de configuración, crackeo de hashes, acceso SSH, port forwarding, explotación de SSTI, escalada a root</li>
-        </ul>
-
-        <div class="tags mb-2">
-            <span class="badge bg-secondary">WordPress</span>
-            <span class="badge bg-secondary">Reverse shell</span>
-            <span class="badge bg-secondary">JohnTheRipper - Hash cracking</span>
-            <span class="badge bg-secondary">Port Forwarding</span>
-            <span class="badge bg-secondary">SSTI</span>
-        </div>
-
-        <a href="writeups/thefirstavenger.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
-            Leer write-up
-        </a>
-    </div>
-  </div>
-
-  <div class="writeup" data-tags="enumeración web,ficheros cifrados,cracking de hashes,fuerza bruta SSH,sudo,escalada de privilegios">
-        <h4 class="text-warning">🧠 CryptoLabyrinth | TheHackerLabs</h4>
-        <p>Cracking de múltiples hashes y fuerza bruta SSH con wordlist personalizada. Escalada mediante contraseña crackeada.</p>
-        <ul class="list-unstyled">
-          <li><strong>Plataforma:</strong> TheHackerLabs</li>
-          <li><strong>Técnicas:</strong> fuzzing web, ficheros cifrados, cracking de hashes, fuerza bruta SSH, escalada de privilegios</li>
-        </ul>
-        <div class="tags mb-2">
-          <span class="badge bg-secondary">Gobuster - Fuzzing web</span>
-          <span class="badge bg-secondary">JohnTheRipper - Cracking de hashes</span>
-          <span class="badge bg-secondary">Hydra - Fuerza bruta SSH</span>
-          <span class="badge bg-secondary">Escalada de privilegios contraseña crackeada</span>
-        </div>
-        <a href="writeups/cryptolabyrinth.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
-          Leer write-up
-        </a>
-    </div>
-
-    <div class="writeup" data-tags="SMB anónimo,compartidos,escalada SYSTEM,reverse shell,script SUID">
-        <h4 class="text-warning">🦘 Quokka | TheHackerLabs</h4>
-        <p>Enumeración SMB y escalada a SYSTEM mediante sustitución de script con reverse shell en PowerShell.</p>
-        <ul class="list-unstyled">
-            <li><strong>Plataforma:</strong> TheHackerLabs</li>
-            <li><strong>Técnicas:</strong> SMB anónimo, compartidos, escalada SYSTEM, reverse shell, Escalada de privilegios mediante Binarios SUID</li>
-        </ul>
-        <div class="tags mb-2">
-            <span class="badge bg-secondary">SMB anónimo</span>
-            <span class="badge bg-secondary">Escalada SYSTEM</span>
-            <span class="badge bg-secondary">Reverse shell</span>
-            <span class="badge bg-secondary">Escalada de privilegios - Binarios SUID</span>
-        </div>
-        <a href="writeups/quokka.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
-            Leer write-up
-        </a>
-    </div>
-
-    <div class="writeup" data-tags="Base64,Gobuster,webshell,fuerza bruta SSH,Webmin,reverse shell,escalada de privilegios">
-        <h4 class="text-warning">🔔 Campana Feliz | TheHackerLabs</h4>
-        <p>Decodificación base64, enumeración con Gobuster y explotación de shell.php. Escalada mediante reverse shell y acceso a Webmin.</p>
-        <ul class="list-unstyled">
-            <li><strong>Plataforma:</strong> TheHackerLabs</li>
-            <li><strong>Técnicas:</strong> Gobuster - Fuzzing web, webshell, Hydra - Fuerza bruta SSH, Escalada de privilegios Reverse shell en Webmin</li>
-        </ul>
-        <div class="tags mb-2">
-            <span class="badge bg-secondary">Gobuster - Fuzzing web</span>
-            <span class="badge bg-secondary">Webshell</span>
-            <span class="badge bg-secondary">Hydra - Fuerza bruta SSH</span>
-            <span class="badge bg-secondary">Escalada de privilegios Reverse shell en Webmin</span>
-        </div>
-        <a href="writeups/campanafeliz.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
-            Leer write-up
-        </a>
-    </div>
-
-    <div class="writeup" data-tags="SQLi,cracking de hashes,SSH,pspy,script vulnerable,Docker,escalada de privilegios">
-        <h4 class="text-warning">🏃 Runners | TheHackerLabs</h4>
-        <p>Inyección SQL, acceso SSH tras crackeo de hashes, y Script vulnerable y Docker.</p>
-        <ul class="list-unstyled">
-            <li><strong>Plataforma:</strong> TheHackerLabs</li>
-            <li><strong>Técnicas:</strong> SQLi, CrackStation - Cracking de hashes, Enumeración con pspy, script vulnerable, Escalada de privilegios vía Docker</li>
-        </ul>
-        <div class="tags mb-2">
-            <span class="badge bg-secondary">SQLi</span>
-            <span class="badge bg-secondary">CrackStation - Cracking de hashes</span>
-            <span class="badge bg-secondary">Enumeración con pspy</span>
-            <span class="badge bg-secondary">Script vulnerable</span>
-            <span class="badge bg-secondary">Escalada de privilegios vía Docker</span>
-        </div>
-        <a href="writeups/runners.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
-            Leer write-up
-        </a>
-    </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    const searchInput = document.getElementById("searchInput");
-    const writeups = document.getElementsByClassName("writeup");
-
-    searchInput.addEventListener("keyup", function () {
-      const value = this.value.toLowerCase();
-      Array.from(writeups).forEach((w) => {
-        const text = w.textContent.toLowerCase();
-        w.style.display = text.includes(value) ? "" : "none";
-      });
-    });
-  </script>
+        searchInput.addEventListener("keyup", function () {
+        const value = this.value.toLowerCase();
+        Array.from(writeups).forEach((w) => {
+            const text = w.textContent.toLowerCase();
+            w.style.display = text.includes(value) ? "" : "none";
+        });
+        });
+    </script>
 </body>
 </html>
