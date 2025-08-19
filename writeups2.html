@@ -115,6 +115,26 @@
 
     <div id="writeupsContainer" class="mt-4">
         <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
+        <div class="writeup" data-tags="FTP anónimo,CMS Elkarte,reverse shell,crackeo ZIP,credenciales,scp,escalada de privilegios">
+          <h4 class="text-warning">🥭 Papaya | TheHackerLabs</h4>
+          <p>Write-up de la máquina Papaya, donde se obtiene acceso inicial por FTP anónimo, se analiza y explota un CMS Elkarte para conseguir una reverse shell como <code>www-data</code>. Posteriormente se crackea un archivo ZIP para obtener credenciales y se escala a root usando <code>scp</code>.</p>
+          <ul class="list-unstyled">
+            <li><strong>Plataforma:</strong> TheHackerLabs</li>
+            <li><strong>Técnicas:</strong> Acceso por FTP anónimo, explotación de CMS Elkarte, reverse shell como www-data, crackeo de ZIP, obtención de credenciales, escalada con <code>scp</code></li>
+          </ul>
+          <div class="tags mb-2">
+            <span class="badge bg-secondary">FTP Anónimo</span>
+            <span class="badge bg-secondary">CMS Elkarte</span>
+            <span class="badge bg-secondary">Reverse shell</span>
+            <span class="badge bg-secondary">JohnTheRipper - Hash cracking ZIP</span>
+            <span class="badge bg-secondary">scp</span>
+            <span class="badge bg-secondary">Escalada de privilegios - SCP</span>
+          </div>
+          <a href="writeups/papaya.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+            Leer write-up
+          </a>
+        </div>
+        
         <div class="writeup" data-tags="LFI,ROT13,crackeo ZIP,LXD,escalada de privilegios">
           <h4 class="text-warning">⛩️ Templo | TheHackerLabs</h4>
           <p>Write-up de la máquina Templo, donde se explota una vulnerabilidad LFI con bypass por codificación ROT13, se descifra el nombre de archivos ocultos, se crackea un archivo ZIP protegido con contraseña, y se escala privilegios utilizando LXD.</p>
@@ -285,3 +305,4 @@
 </body>
 
 </html>
+
