@@ -115,6 +115,24 @@
 
     <div id="writeupsContainer" class="mt-4">
         <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
+        <div class="writeup" data-tags="LFI,ROT13,crackeo ZIP,LXD,escalada de privilegios">
+          <h4 class="text-warning">⛩️ Templo | TheHackerLabs</h4>
+          <p>Write-up de la máquina Templo, donde se explota una vulnerabilidad LFI con bypass por codificación ROT13, se descifra el nombre de archivos ocultos, se crackea un archivo ZIP protegido con contraseña, y se escala privilegios utilizando LXD.</p>
+          <ul class="list-unstyled">
+            <li><strong>Plataforma:</strong> TheHackerLabs</li>
+            <li><strong>Técnicas:</strong> LFI con codificación ROT13, ocultación de rutas, crackeo de ZIP protegido, escalada de privilegios con LXD</li>
+          </ul>
+          <div class="tags mb-2">
+            <span class="badge bg-secondary">LFI</span>
+            <span class="badge bg-secondary">Cracking ROT13</span>
+            <span class="badge bg-secondary">JohnTheRipper - Hash cracking ZIP</span>
+            <span class="badge bg-secondary">Escalada de privilegios con LXD</span>
+          </div>
+          <a href="writeups/templo.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+            Leer write-up
+          </a>
+        </div>
+        
         <div class="writeup" data-tags="código fuente,fuerza bruta SSH,Hydra,.bash_history,Docker,escape de contenedor,chroot,escalada de privilegios">
             <h4 class="text-warning">🧩 CanYouHackMe | TheHackerLabs</h4>
             <p>Write-up de la máquina CanYouHackMe, donde se analiza el código fuente de una web para obtener credenciales, se realiza fuerza bruta SSH con Hydra y se escapa de un contenedor Docker a través de un volumen montado. Finalmente, se usa <code>chroot</code> para escalar privilegios y obtener acceso root.</p>
@@ -265,4 +283,5 @@
         });
     </script>
 </body>
+
 </html>
