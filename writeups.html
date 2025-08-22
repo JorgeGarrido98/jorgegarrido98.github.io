@@ -112,6 +112,19 @@
       <p>En esta sección comparto write-ups de CTFs, análisis de vulnerabilidades y técnicas de explotación que he resuelto o estudiado.</p>
 
       <div class="writeup">
+        <h4 class="text-warning">🍔 Goiko | TheHackerLabs</h4>
+        <p>Write-up de la máquina Goiko, en la que se inicia con una enumeración de recursos compartidos vía SMB. A través del cracking de un archivo ZIP y de una clave <code>id_rsa</code> protegida, se consigue acceso como los usuarios <code>gurpreet</code> y posteriormente <code>nika</code>. Durante la escalada de privilegios, se explora MariaDB y se aprovecha un script con permisos de root para conseguir acceso total.</p>
+        <ul class="list-unstyled">
+          <li><strong>Plataforma:</strong> TheHackerLabs</li>
+          <li><strong>Técnicas:</strong> Enumeración por SMB, cracking de ZIP e ID_RSA protegida, acceso como gurpreet y luego nika, enumeración en MariaDB, escalada con script con permisos de root</li>
+        </ul>
+        <a href="https://github.com/JorgeGarrido98/TheHackerLabs/blob/main/Goiko.md" target="_blank" 
+          class="btn btn-warning mt-2 fw-bold d-block mx-auto" style="max-width: 200px;">
+          Leer write-up
+        </a>
+      </div>
+      
+      <div class="writeup">
         <h4 class="text-warning">📤 Uploader | TheHackerLabs</h4>
         <p>Write-up de la máquina Uploader, donde se obtiene acceso inicial mediante la subida de un archivo PHP que genera una reverse shell. Durante la fase de enumeración, se encuentra un archivo ZIP protegido que se crackea con John para extraer credenciales. Posteriormente, se decodifica una contraseña en base64 y la escalada final a root se realiza utilizando <code>tar</code> con permisos <code>sudo</code>.</p>
         <ul class="list-unstyled">
