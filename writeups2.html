@@ -115,6 +115,25 @@
 
     <div id="writeupsContainer" class="mt-4">
         <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
+        <div class="writeup" data-tags="SMB,crackeo ZIP,ID_RSA,gurpreet,nika,MariaDB,script root,escalada de privilegios">
+          <h4 class="text-warning">🍔 Goiko | TheHackerLabs</h4>
+          <p>Write-up de la máquina Goiko, donde se comienza con la enumeración por SMB, se crackean ficheros ZIP e ID_RSA protegida para acceder como <code>gurpreet</code> y más tarde como <code>nika</code>. Tras la enumeración de MariaDB, se consigue la escalada de privilegios mediante un script ejecutado como root.</p>
+          <ul class="list-unstyled">
+            <li><strong>Plataforma:</strong> TheHackerLabs</li>
+            <li><strong>Técnicas:</strong> Enumeración SMB, crackeo de ZIP e ID_RSA, enumeración en MariaDB, escalada con script con permisos de root</li>
+          </ul>
+          <div class="tags mb-2">
+            <span class="badge bg-secondary">Enumeración SMB - SMBClient</span>
+            <span class="badge bg-secondary">JohnTheRipper - Hash cracking ZIP e ID_RSA</span>
+            <span class="badge bg-secondary">Enumeración MariaDB</span>
+            <span class="badge bg-secondary">script root</span>
+            <span class="badge bg-secondary">PATH hijack - Escalada `root`</span>
+          </div>
+          <a href="writeups/goiko.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+            Leer write-up
+          </a>
+        </div>
+        
         <div class="writeup" data-tags="reverse shell,upload PHP,ZIP protegido,john,base64,sudo,tar,escalada de privilegios">
           <h4 class="text-warning">📤 Uploader | TheHackerLabs</h4>
           <p>Write-up de la máquina Uploader, donde se consigue una reverse shell mediante la subida de un archivo PHP malicioso. Posteriormente, se crackea un archivo ZIP con <code>john</code> para obtener credenciales, se decodifica una contraseña en base64 y se escala a root utilizando <code>sudo tar</code>.</p>
@@ -322,6 +341,7 @@
 </body>
 
 </html>
+
 
 
 
