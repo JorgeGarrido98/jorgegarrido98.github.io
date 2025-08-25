@@ -115,6 +115,23 @@
 
     <div id="writeupsContainer" class="mt-4">
         <!-- Aquí irán los bloques .writeup con etiquetas y enlaces locales -->
+        <div class="writeup" data-tags="Enumeración FTP,John - Cracking hash KeePass,Escalada de privilegios abuse SUID chown">
+          <h4 class="text-warning">🔒 Decryptor | TheHackerLabs</h4>
+          <p>Write-up de la máquina Decryptor, donde se accede a una base de datos KeePass a través de FTP, se crackea su hash con <code>john</code> y se consigue la escalada de privilegios abusando del binario <code>chown</code> con SUID para modificar <code>/etc/passwd</code>.</p>
+          <ul class="list-unstyled">
+            <li><strong>Plataforma:</strong> TheHackerLabs</li>
+            <li><strong>Técnicas:</strong> Enumeración por FTP, acceso a base de datos KeePass, cracking con john, modificación de <code>/etc/passwd</code> con <code>chown</code> (SUID abuse)</li>
+          </ul>
+          <div class="tags mb-2">
+            <span class="badge bg-secondary">Enumeración FTP</span>
+            <span class="badge bg-secondary">John - Cracking hash KeePass</span>
+            <span class="badge bg-secondary">Escalada de privilegios abuse SUID chown</span>
+          </div>
+          <a href="writeups/decryptor.html" class="btn btn-warning mt-4 fw-bold d-block mx-auto" style="max-width: 200px;">
+            Leer write-up
+          </a>
+        </div>
+        
         <div class="writeup" data-tags="SMB,crackeo ZIP,ID_RSA,gurpreet,nika,MariaDB,script root,escalada de privilegios">
           <h4 class="text-warning">🍔 Goiko | TheHackerLabs</h4>
           <p>Write-up de la máquina Goiko, donde se comienza con la enumeración por SMB, se crackean ficheros ZIP e ID_RSA protegida para acceder como <code>gurpreet</code> y más tarde como <code>nika</code>. Tras la enumeración de MariaDB, se consigue la escalada de privilegios mediante un script ejecutado como root.</p>
@@ -341,6 +358,7 @@
 </body>
 
 </html>
+
 
 
 
