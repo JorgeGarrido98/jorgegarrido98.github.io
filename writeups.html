@@ -112,6 +112,19 @@
       <p>En esta sección comparto write-ups de CTFs, análisis de vulnerabilidades y técnicas de explotación que he resuelto o estudiado.</p>
 
       <div class="writeup">
+        <h4 class="text-warning">🔒 Decryptor | TheHackerLabs</h4>
+        <p>Write-up de la máquina Decryptor, donde la fase inicial se basa en la enumeración de un servidor FTP que expone una base de datos KeePass. Tras extraer el hash, se crackea con John para acceder por SSH como el usuario <code>chiquero</code>. Finalmente, se realiza una escalada de privilegios aprovechando el binario <code>chown</code> con bit SUID para modificar el archivo <code>/etc/passwd</code> y obtener acceso como root.</p>
+        <ul class="list-unstyled">
+          <li><strong>Plataforma:</strong> TheHackerLabs</li>
+          <li><strong>Técnicas:</strong> Enumeración FTP → base de datos KeePass, cracking con John → SSH como chiquero, escalada modificando /etc/passwd con chown (SUID abuse)</li>
+        </ul>
+        <a href="https://github.com/JorgeGarrido98/TheHackerLabs/blob/main/Decryptor.md" target="_blank" 
+          class="btn btn-warning mt-2 fw-bold d-block mx-auto" style="max-width: 200px;">
+          Leer write-up
+        </a>
+      </div>
+      
+      <div class="writeup">
         <h4 class="text-warning">🍔 Goiko | TheHackerLabs</h4>
         <p>Write-up de la máquina Goiko, en la que se inicia con una enumeración de recursos compartidos vía SMB. A través del cracking de un archivo ZIP y de una clave <code>id_rsa</code> protegida, se consigue acceso como los usuarios <code>gurpreet</code> y posteriormente <code>nika</code>. Durante la escalada de privilegios, se explora MariaDB y se aprovecha un script con permisos de root para conseguir acceso total.</p>
         <ul class="list-unstyled">
